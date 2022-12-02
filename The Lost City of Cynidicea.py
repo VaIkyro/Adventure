@@ -1,12 +1,12 @@
 # Bugs:
 # 
 # 
-#
-#
+# 
+# 
 # =======================================================================================================================================
 # Notes:
 # Daekrahm Village, add something for choosing not to follow the footprints
-# Line 453 has been coded, however not tested or time.sleeped, continue testing and developing, character must die here to the boys
+# 
 #
 #
 # =======================================================================================================================================
@@ -95,6 +95,7 @@ def secondLocationDirections():
     print("1 - Bryxton Town")
     print("2 - Azalea Village")
     print("3 - The Snowy Mountains")
+    print()
     choiceTwo = input("- ")
     if choiceTwo == "1":
         loadingBryxtonTown()
@@ -125,6 +126,8 @@ def travellerContinued():
 # The Traveller
 # =======================================================================================================================================
 def theTraveller():
+    global characterHealth
+    characterHealth = 10
     print("""
     THE TRAVELLER:
 
@@ -415,22 +418,20 @@ def daekrahmVillage():
     As the water spits up from all the puddles beneath your feet, you find yourself amongst these cobweb riddened settlements,
     windows all smashed in, boarded up which could only be described as as dried out cloth. Making do with what they have
     available to them and not being as wealthy or profitable as the other villages and towns within their neighbouring
-    vacinity.
-    """)
+    vacinity.""")
     time.sleep(1)
     print("""
-    *dog barks in the distance*
-    """)
+    *dog barks in the distance*""")
     time.sleep(2)
     print("""
-    %s: What was that?
-    """ % (characterName.upper()))
+    %s: What was that?""" % (characterName.upper()))
     time.sleep(2)
     print("""
-    *dog barks again but louder*
-    """)
+    *dog barks again but louder*""")
+    time.sleep(2)
+    print()
     print("Do you approach?")
-    time.sleep(3)
+    time.sleep(1)
     choiceYes = input("- ")
     if choiceYes.lower() in yResponses:
         time.sleep(0.5)
@@ -449,6 +450,17 @@ def daekrahmVillage():
     You slowly turn your back to the dog and walk away.
             """)
 
+def gunDeath():
+    global gunDamage
+    print("*a gun shot sounds from a nearby building, piercing your skull* - %s Health" % (gunDamage))
+    global characterHealth
+    characterHealth = characterHealth - gunDamage
+    time.sleep(1)
+    print("Your health is currently at: %s" % (characterHealth))
+    time.sleep(1)
+    print("%s has died." % (characterName))
+    time.sleep(1)
+    print()
 # =======================================================================================================================================
 # Location Four (Second Choice Path)
 # =======================================================================================================================================
@@ -461,90 +473,74 @@ def bryxtonTown():
 
     Storm clouds gather above, doors slam shut with there locks being clasped together and shutters forgotten. Anyone who
     is anyone within this gruesome town is in all black, hoods and masks on, keeping themselves to themselves. The streets cobbled,
-    and littered with unwanted children.
-    """)
+    and littered with unwanted children.""")
     time.sleep(1)
     print("""
-    BOY ONE: Excuse me Mister, are you lost?
-    """)
+    BOY ONE: Excuse me Mister, are you lost?""")
     time.sleep(1)
     lostIN = input("- ")
-    if lostIN in yResponses:
-        print()
+    if lostIN.lower() in yResponses:
+        time.sleep(1)
         print("""
-    %s: Yes, I am, could you help me?
-        """ % (characterName.upper()))
+    %s: Yes, I am, could you help me?""" % (characterName.upper()))
         time.sleep(1)
         print("""
     BOY THREE: No. You should never have come here!
         """)
-        print()
         time.sleep(1)
-        print("*a gun shot sounds from a nearby building, piercing your chest*")
-        global characterHealth
-        characterHealth = characterHealth - gunDamage
-        print()
-        print("Your health is currently at: %s" % (characterHealth))
-        time.sleep(0.5)
-        print("%s has died." % (characterName))
-        time.sleep(0.5)
-        print()
-        print("Would you like to try again?")
-        playAgain = input("- ")
-        if playAgain in yResponses:
-            theTraveller()
-        elif playAgain in nResponses:
-            print()
-    elif lostIN in nResponses:
+        gunDeath()
+    elif lostIN.lower() in nResponses:
         print()
         print("Your health is currently at: %s" % (characterHealth))
         time.sleep(1)
         print("""
-    BOY TWO: No need to be rude.
-        """)
-        time.sleep(0.5)
+    BOY TWO: No need to be rude""")
+        time.sleep(1)
         print()
-        print("*Boy Two throws a punch at you")
+        global boy2Damage
+        print("*Boy Two throws a punch at you* - %s Health" % (boy2Damage))
         time.sleep(1)
         characterHealth = characterHealth - boy2Damage
         print("Your health is now at: %s" % (characterHealth))
-        print()
-        time.sleep(0.5)
+        time.sleep(1)
         print("""
-        SITUATION:
+    SITUATION:
 
-        The boys drag you into The Black Forest neighbouring Bryxton Town and throw you down in a bush full
-        of poison ivy and berries. Not only do they leave you there, but before they do, they throw a couple more
-        punches and kicks in to weaken you further.
+    The boys drag you into The Black Forest neighbouring Bryxton Town and throw you down in a bush full
+    of poison ivy and berries. Not only do they leave you there, but before they do, they throw a couple more
+    punches and kicks in to weaken you further.
         """)
         characterHealth = characterHealth - boy1Damage
-        print()
-        print("*Boy 1 kicks you*")
-        print()
+        time.sleep(1)
+        print("*Boy 1 kicks you* - %s Health" % (boy1Damage))
+        time.sleep(1)
         print("Your health is now at: %s" % (characterHealth))
         print()
+        time.sleep(1)
         print("Do you try to get back up? ")
+        time.sleep(1)
         getUp = input("- ")
         if getUp in yResponses: 
+            time.sleep(1)
             print()
-            print("*Boy 3 headbutts you knocking you back down to the floor knocking you unconious*")
-            characterHealth - 5
-            print()
+            print("*Boy 3 headbutts you knocking you back down to the floor knocking you unconious* - 5 Health")
+            characterHealth = characterHealth - 5
+            time.sleep(1)
             print("Your health is now at: %s" % (characterHealth))
-            print()
+            time.sleep(1)
             print("""
-        SITUATION:
+    SITUATION:
 
-        Due to the poisonous entities around you and the state of your conciousness, you are left, stranded.
-        Your health starts to deplete . . .
+    Due to the poisonous entities around you and the state of your conciousness, you are left, stranded.
+    Your health starts to deplete . . .
             """)
             time.sleep(1)
-            characterHealth - 1
+            characterHealth = characterHealth - 1
             print("Your health is now at: %s" % (characterHealth))
-            time.sleep(0.5)
-            characterHealth - 1
+            time.sleep(2)
+            characterHealth = characterHealth - 1
             print("Your health is now at: %s" % (characterHealth))
-            time.sleep(0.5)
+            time.sleep(2)
             print("%s has died." % (characterName))
             time.sleep(0.5)
             print()
@@ -555,39 +551,17 @@ def bryxtonTown():
             elif playAgain in nResponses:
                 print()
         elif getUp in nResponses:
+            time.sleep(1)
             print("""
-        SITUATION:
+    SITUATION:
 
-        You refuse to get up and give in to your decision.
+    You refuse to get up and give in to your decision.
             """)
             time.sleep(1)
-            characterHealth - 1
-            print("Your health is now at: %s" % (characterHealth))
-            time.sleep(1)
-            characterHealth - 1
-            print("Your health is now at: %s" % (characterHealth))
-            time.sleep(1)
-            characterHealth - 1
-            print("Your health is now at: %s" % (characterHealth))
-            time.sleep(1)
-            characterHealth - 1
-            print("Your health is now at: %s" % (characterHealth))
-            time.sleep(1)
-            characterHealth - 1
-            print("Your health is now at: %s" % (characterHealth))
-            time.sleep(1)
-            characterHealth - 1
-            print("Your health is now at: %s" % (characterHealth))
-            time.sleep(1)
-            characterHealth - 1
-            print("Your health is now at: %s" % (characterHealth))
-            time.sleep(1)
-            characterHealth - 1
-            print("Your health is now at: %s" % (characterHealth))
-            time.sleep(1)
-            characterHealth - 1
-            print("Your health is now at: %s" % (characterHealth))
-            time.sleep(0.5)
+            for i in range(6):
+                characterHealth = characterHealth - 1
+                print("Your health is now at: %s" % (characterHealth))
+                time.sleep(1)
             print("%s has died." % (characterName))
             time.sleep(0.5)
             print()
@@ -604,6 +578,56 @@ def bryxtonTown():
 # =======================================================================================================================================
 def azaleaVillage():
     print()
+    print("You have arrived at: Azalea Village")
+    time.sleep(0.5)
+    print("""
+    LOCATION:
+
+    For the first time in your travels, you are met by utter bliss. Flowers blossom, homes thrive, children
+    are laughing, singing, having fun. Everyone is smiling, the sun is shining down on you, and for once
+    it seems as though the world has come to peace.""")
+    time.sleep(1)#Set to 15 seconds once done
+    print("""
+    VILLAGE PERSON 1: %s, welcome! It is amazing to see you, we have been awaiting your arrival.
+                      You look so much better than we anticipated after your tiresome journey!""" % (characterName))
+    time.sleep(2)
+    print("""
+    %s: How are you? How do you know who I am? This place is absolutely stunning, for once I can
+           actually breath and not be looking over my shoulder constantly.""" % (characterName.upper()))
+    time.sleep(2)
+    print("""
+    VILLAGER PERSON 3: We are good! The Traveller wrote to us informing us we were to be expecting you 
+                       within the next few days, and here you are! We do have some news though which
+                       may interest you . . .""")
+    time.sleep(2)
+    print("""
+    %s: Is that so? Please, do tell. I have been making my way around the Realm and so far I am piecing
+           together a few things that are now coming together, and I am curious to know what it is you have
+           for me.""" % (characterName.upper()))
+    time.sleep(2)
+    print("""
+    VILLAGER PERSON 2: Over the past week, our food supplies have been dwindling, we did not know why until
+                       one of the children saw a beast of some kind stealing food from one of our carts. When the beast saw
+                       the child, it ran towards The Snowy Mountains. It's been doing this for the past month, but it has been
+                       more frequent as of late.""")
+    time.sleep(2)
+    print("""
+    YOUNG GIRL 2: Are you going to help us %s?""" % (characterName))
+    time.sleep(1)
+    choiceYes = input("- ")
+    if choiceYes.lower() in yResponses:
+        time.sleep(0.5)
+        print("""
+    YOUNG GIRL 2: Thank you so much %s! You are our hero!""" % (characterName.upper()))
+        print()
+        time.sleep(1)
+        secondLocationDirections()
+    elif choiceYes.lower() in nResponses:
+        print()
+        print("YOUNG GIRL 2: Oh . . . that's sad to hear.")
+        time.sleep(1)
+        print()
+        gunDeath()
 
 # =======================================================================================================================================
 # Location Six (Second Choice Path)
