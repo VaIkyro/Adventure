@@ -5,7 +5,7 @@
 # 
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 # Notes:
-# 
+# Formatting currently Lockwood onwards
 # 
 # 
 #
@@ -41,6 +41,11 @@ clawDamage = characterHealth
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 time.sleep(1)
 print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                    ADVENTURES: THE LOST EXPLORER                                   ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+""")
+print("""
     INTRODUCTION:
     ▔▔▔▔▔▔▔▔▔▔▔▔▔
 
@@ -65,7 +70,7 @@ def locationDirections():
         ┃ Where would you like to go? ┃
         ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
         """)
-        print("             ➂ - Daekrahm Village")
+        print("        ➂ - Daekrahm Village")
         print()
     elif bootObtained == True and phraseObtained == False:
         print("""
@@ -73,8 +78,8 @@ def locationDirections():
         ┃ Where would you like to go? ┃
         ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
         """)
-        print("             ➁ - Lockwood Village")
-        print("             ➂ - Daekrahm Village")
+        print("        ➁ - Lockwood Village")
+        print("        ➂ - Daekrahm Village")
         print()
     elif bootObtained == False and phraseObtained == True:
         print("""
@@ -82,8 +87,8 @@ def locationDirections():
         ┃ Where would you like to go? ┃
         ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
         """)
-        print("             ➀ - Oar's Rest")
-        print("             ➂ - Daekrahm Village")
+        print("        ➀ - Oar's Rest")
+        print("        ➂ - Daekrahm Village")
         print()
     else:
         print("""
@@ -91,9 +96,9 @@ def locationDirections():
         ┃ Where would you like to go? ┃
         ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
         """)
-        print("             ➀ - Oar's Rest")
-        print("             ➁ - Lockwood Village")
-        print("             ➂ - Daekrahm Village")
+        print("        ➀ - Oar's Rest")
+        print("        ➁ - Lockwood Village")
+        print("        ➂ - Daekrahm Village")
         print()
     choiceOne = input("- ")
     print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
@@ -130,13 +135,13 @@ def secondLocationDirections():
 def travellerContinued():
     print("""
     〈 THE TRAVELLER: 〉 It is lovely to meet you %s!""" % (characterName))
-    time.sleep(0.5)
+    time.sleep(1)
     print()
     startQuest = input(""" 
     〈 THE TRAVELLER: 〉 Do you accept my quest? - """)
     print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     if startQuest.lower() in yResponses:
-        time.sleep(0.5)
+        time.sleep(1)
         print()
         print("       Excellent! Let's get this started!")
         locationDirections()
@@ -162,7 +167,7 @@ def theTraveller():
     """)
     time.sleep(1)#Set to 15 seconds once done
     global characterName
-    characterName = input("    Enter your Characters Name - ")
+    characterName = input("    Enter your Characters name - ")
     print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     travellerContinued()
 
@@ -172,13 +177,20 @@ def theTraveller():
 def bootPhraseHead():
     # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
         if bootObtained == True and phraseObtained == True and beastHeadObtained == True:
-            print("1 - I have the boot")
-            print("2 - I have the phrase")
-            print("3 - I have the head")
-            print("4 - Continue Locations")
+            print("""
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        ┃           Options           ┃
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """)
+            print("        ➀ - I have the boot")
+            print("        ➁ - I have the phrase")
+            print("        ➂ - I have the head")
+            print("        ➃ - Continue Locations")
+            print()
             rChoice = input("- ")
+            print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             if rChoice == "1":
-                time.sleep(0.5)
+                time.sleep(1)
                 print("""
     〈 THE TRAVELLER: 〉 Oh wow! I haven't seen this in a while! This belonged to the Explorer I have
                          you looking for. My oh my, this has aged. But do you see how it is torn? It
@@ -186,10 +198,11 @@ def bootPhraseHead():
                          you think you could go find more information? It may help us track him down!
                    """)
                 input("- ")
+                print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
                 print()
                 bootPhraseHead()
             elif rChoice == "2":
-                time.sleep(0.5)
+                time.sleep(1)
                 print()
                 print("*Recites the Phrase to The Traveller*")
                 print("""
@@ -198,10 +211,11 @@ def bootPhraseHead():
                          and see what you can find! Sound good?
                     """)
                 input("- ")
+                print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
                 print()
                 bootPhraseHead()
             elif rChoice == "3":
-                time.sleep(0.5)
+                time.sleep(1)
                 print("""
     〈 THE TRAVELLER: 〉 Wait . . . you did it . . . he really did turn into the beast that the myth 
                          was saying. Wow, I really am going to miss him. But congratulations %s you
@@ -223,12 +237,19 @@ def bootPhraseHead():
                 locationDirections()
     # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
         elif bootObtained == True and phraseObtained == True and beastHeadObtained == False:
-            print("1 - I have the boot")
-            print("2 - I have the phrase")
-            print("3 - Continue Locations")
+            print("""
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        ┃           Options           ┃
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """)
+            print("        ➀ - I have the boot")
+            print("        ➁ - I have the phrase")
+            print("        ➂ - Continue Locations")
+            print()
             rChoice = input("- ")
+            print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             if rChoice == "1":
-                time.sleep(0.5)
+                time.sleep(1)
                 print("""
     〈 THE TRAVELLER: 〉 Oh wow! I haven't seen this in a while! This belonged to the Explorer I have
                          you looking for. My oh my, this has aged. But do you see how it is torn? It
@@ -236,10 +257,11 @@ def bootPhraseHead():
                          you think you could go find more information? It may help us track him down!
                    """)
                 input("- ")
+                print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
                 print()
                 bootPhraseHead()
             elif rChoice == "2":
-                time.sleep(0.5)
+                time.sleep(1)
                 print()
                 print("*Recites the Phrase to The Traveller*")
                 print("""
@@ -248,6 +270,7 @@ def bootPhraseHead():
                          and see what you can find! Sound good?
                     """)
                 input("- ")
+                print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
                 print()
                 bootPhraseHead()
             elif rChoice == "3":
@@ -255,11 +278,18 @@ def bootPhraseHead():
                 locationDirections()
     # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
         elif bootObtained == True and phraseObtained == False and beastHeadObtained == False:
-            print("1 - I have the boot")
-            print("2 - Continue Locations")
+            print("""
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        ┃           Options           ┃
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """)
+            print("        ➀ - I have the boot")
+            print("        ➁ - Continue Locations")
+            print()
             rChoice = input("- ")
+            print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             if rChoice == "1":
-                time.sleep(0.5)
+                time.sleep(1)
                 print("""
     〈 THE TRAVELLER: 〉 Oh wow! I haven't seen this in a while! This belonged to the Explorer I have
                          you looking for. My oh my, this has aged. But do you see how it is torn? It
@@ -267,6 +297,7 @@ def bootPhraseHead():
                          you think you could go find more information? It may help us track him down!
                    """)
                 input("- ")
+                print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
                 print()
                 bootPhraseHead()
             elif rChoice == "2":
@@ -274,11 +305,18 @@ def bootPhraseHead():
                 locationDirections()
     # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
         elif bootObtained == False and phraseObtained == True and beastHeadObtained == False:
-            print("1 - I have the phrase")
-            print("2 - Continue Locations")
+            print("""
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        ┃           Options           ┃
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """)
+            print("        ➀ - I have the phrase")
+            print("        ➁ - Continue Locations")
+            print()
             rChoice = input("- ")
+            print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             if rChoice == "1":
-                time.sleep(0.5)
+                time.sleep(1)
                 print()
                 print("*Recites the Phrase to The Traveller*")
                 print("""
@@ -287,6 +325,7 @@ def bootPhraseHead():
                          and see what you can find! Sound good?
                     """)
                 input("- ")
+                print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
                 print()
                 bootPhraseHead()
             elif rChoice == "2":
@@ -294,9 +333,16 @@ def bootPhraseHead():
                 locationDirections()
     # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
         elif bootObtained == False and phraseObtained == False and beastHeadObtained == False:
-            print("I have nothing")
-            print("1 - Continue Locations")
+            print("""
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        ┃           Options           ┃
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """)
+            print("        I have nothing")
+            print("        ➀ - Continue Locations")
+            print()
             rChoice = input("- ")
+            print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             if rChoice == "1":
                 print()
                 locationDirections()
@@ -306,12 +352,11 @@ def bootPhraseHead():
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 def returnTraveller():
     print()
-    print("You have arrived at: The Traveller")
-    time.sleep(0.5)
+    print("    You have arrived at: The Traveller")
+    time.sleep(1)
     print("""
-    〈 THE TRAVELLER: 〉 Nice to see you again %s, how goes the exploring? Do you have anything for me?
-    """ % (characterName))
-    time.sleep(2)
+    〈 THE TRAVELLER: 〉 Nice to see you again %s, how goes the exploring? Do you have anything for me?""" % (characterName))
+    time.sleep(1)
     bootPhraseHead()
 
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
@@ -320,7 +365,7 @@ def returnTraveller():
 def oarRest():
     print()
     print("You have arrived at: Oar's Rest")
-    time.sleep(0.5)
+    time.sleep(1)
     print("""
     LOCATION:
     ▔▔▔▔▔▔▔▔▔
@@ -334,29 +379,31 @@ def oarRest():
     print("""
     〈 OLD MAN: 〉 Who goes there? This is ancient land, get off it quickly before you spoil the
                    riches""")
-    time.sleep(2)
+    time.sleep(1)
     print("""
     〈 %s: 〉 The Traveller sent me on a quest and provided me with different directions,
                  so here I am. Who are you?""" % (characterName.upper()))
-    time.sleep(2)
+    time.sleep(1)
     print("""
     〈 OLD MAN: 〉 They call me the Old Man. Probably because I am old and slowly dying, but they don't care.
                    And he did did he? I'm guessing this "quest" of his is to try and find the Explorer, 
                    am I right?""")
     print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     print()
-    time.sleep(3)
+    time.sleep(1)
     yesChoice = input("- ")
     print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     if yesChoice.lower() in yResponses:
-        time.sleep(0.5)
+        time.sleep(1)
         print("""
     〈 OLD MAN: 〉 I thought so, up to no good again he is The Traveller. Ah well, here, this may be of
                    use to you.""")
         global bootObtained
         bootObtained = True
-        print()
-        print("◈ Old Boot has been obtained!◈")
+        print("""
+
+        ◈ Old Boot has been obtained!◈
+        """)
         time.sleep(1)
     elif yesChoice.lower() in nResponses:
         print("""
@@ -367,36 +414,45 @@ def oarRest():
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
     def bootHasObtained():
         print("""
-    DECISION:
-    ▔▔▔▔▔▔▔▔▔
-
-    1 - What does this boot do?
-    2 - Em, has this been washed?
-    3 - Sorry, I think this was a bad choice.
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        ┃     What do you choose?     ┃
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
         """)
+        print("        ➀ - What does this boot do?")
+        print("        ➁ - Em, has this been washed?")
+        print("        ➂ - Sorry, I think this was a bad choice.")
+        print()
         bootChoice = input("- ")
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
         if bootChoice == "1":
+            time.sleep(1)
             print("""
-    OLD MAN: What you are currently holding is something that was found up some mountain a
-             long time ago. No one knows what it is for though. Go back to The Traveller and
-             inform him of what you have found!""")
+    〈 OLD MAN: 〉 What you are currently holding is something that was found up some mountain a
+                   long time ago. No one knows what it is for though. Go back to The Traveller and
+                   inform him of what you have found!""")
+            print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             time.sleep(1)
             print()
-            rtIN = input("Would you like to go back to the Traveller? - ")
+            rtIN = input("    Would you like to go back to the Traveller? - ")
+            print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             if rtIN in yResponses:
                 returnTraveller()
             elif rtIN in nResponses:
                 locationDirections()
         elif bootChoice == "2":
+            time.sleep(1)
             print("""
-    OLD MAN: Does it look like it has been washed? And more importantly does that look like
-             mine? I do not know whether to take that as an insult or a compliment.""")
+    〈 OLD MAN: 〉 Does it look like it has been washed? And more importantly does that look like
+                   mine? I do not know whether to take that as an insult or a compliment.""")
+            time.sleep(1)
             bootHasObtained()
         elif bootChoice == "3":
+            time.sleep(1)
             print("""
-    OLD MAN: Fair enough, give the Travelled a slap for me will you?""")
-            theTraveller()
-    time.sleep(0.5)
+    〈 OLD MAN: 〉 Fair enough, give the Traveller a slap for me will you?""")
+            time.sleep(1)
+            returnTraveller()
+    time.sleep(1)
 
     if bootObtained == True:
         bootHasObtained()
@@ -409,10 +465,10 @@ def oarRest():
 def lockwoodVillage():
     print()
     print("You have arrived at: Lockwood Village")
-    time.sleep(0.5)
+    time.sleep(1)
     print("""
     LOCATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     Bells toll loudly and the shouting of men and women as a gathering is pulled together in the
     village square. Children continue playing whilst the rest casually approach the center. Clouds
@@ -421,69 +477,78 @@ def lockwoodVillage():
     """)
     time.sleep(1)#Set to 15 seconds once done
     print("""
-    YOUNG GIRL: When the sun sets the clouds appear but beware of the monster upon high.""")
-    time.sleep(2)
+    〈 YOUNG GIRL: 〉 When the sun sets the clouds appear but beware of the monster upon high.""")
+    time.sleep(1)
     print("""
-    %s: The Traveller sent me on a quest and provided me with different directions,
-           so here I am. Who are you?""" % (characterName.upper()))
-    time.sleep(2)
+    〈 %s: 〉 The Traveller sent me on a quest and provided me with different directions,
+                 so here I am. Who are you?""" % (characterName.upper()))
+    time.sleep(1)
     print("""
-    YOUNG GIRL: My name is Lisa, I was born here with my siblings, our parents are very busy and
-                not around much as they are in charge of the Village! The Traveller sent a note
-                that we are to be expecting someone who is looking for the Explorer, is that you?""")
-    time.sleep(3)
+    〈 YOUNG GIRL: 〉 My name is Lisa, I was born here with my siblings, our parents are very busy and
+                      not around much as they are in charge of the Village! The Traveller sent a note
+                      that we are to be expecting someone who is looking for the Explorer, is that you?""")
+    print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
+    print()
+    time.sleep(1)
     choiceYes = input("- ")
+    print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     if choiceYes.lower() in yResponses:
-        time.sleep(0.5)
+        time.sleep(1)
         print("""
-    YOUNG GIRL: Oh wow, an adventurer! I can't believe I get to meet one! This definitely is a rare
-                occurence.""")
+    〈 YOUNG GIRL: 〉 Oh wow, an adventurer! I can't believe I get to meet one! This definitely is a rare
+                      occurence.""")
         global phraseObtained
         phraseObtained = True
         print()
-        print("Phrase has been obtained!")
+        print("""
+
+        ◈ Phrase has been obtained!◈
+        """)
         time.sleep(1)
     elif choiceYes.lower() in nResponses:
-        print("YOUNG GIRL: It was nice to see you " + characterName + ", but I need to go!")
+        print("〈 YOUNG GIRL: 〉 It was nice to see you " + characterName + ", but I need to go!")
 
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 # Phrase Obtained
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
     def phraseHasObtained():
         print("""
-    DECISION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-
-    1 - What was that saying you just mentioned?
-    2 - What game are you playing?
-    3 - Excuse me little girl.
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        ┃           Options           ┃
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
         """)
+        print("        ➀ - What was that saying you just mentioned?")
+        print("        ➁ - What game are you playing?")
+        print("        ➂ - Excuse me little girl.")
         bootChoice = input("- ")
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
         if bootChoice == "1":
             print("""
-    YOUNG GIRL: Oh that! It's this old saying my mama tells me and my siblings, we don't exactly
-                know what it means or where it came from, but our mama says it came from this old
-                adventurer who went our adventuring and got lost down a hole in the middle of 
-                nowhere, maybe go back to The Traveller and teach him of the phrase! 
+    〈 YOUNG GIRL: 〉 Oh that! It's this old saying my mama tells me and my siblings, we don't exactly
+                      know what it means or where it came from, but our mama says it came from this old
+                      adventurer who went our adventuring and got lost down a hole in the middle of 
+                      nowhere, maybe go back to The Traveller and teach him of the phrase! 
                 """)
+            print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             time.sleep(1)
             print()
             rtIN = input("Would you like to go back to the Traveller? - ")
+            print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             if rtIN in yResponses:
                 returnTraveller()
             elif rtIN in nResponses:
                 locationDirections()
         elif bootChoice == "2":
             print("""
-    YOUNG GIRL: It's called ipp dipp, you get a pumpkin chunk and a bale of hay and the first person
-                to get the pumpkin chunk to reach the floor through the hay wins!.""")
+    〈 YOUNG GIRL: 〉 It's called ipp dipp, you get a pumpkin chunk and a bale of hay and the first person
+                      to get the pumpkin chunk to reach the floor through the hay wins!.""")
             phraseHasObtained()
         elif bootChoice == "3":
             print("""
-    YOUNG GIRL: That's ok! Sorry I couldn't help more, maybe The Traveller can give you somewhere
-                else to go!""")
+    〈 YOUNG GIRL: 〉 That's ok! Sorry I couldn't help more, maybe The Traveller can give you somewhere
+                      else to go!""")
             locationDirections()
-    time.sleep(0.5)
+    time.sleep(1)
 
     if phraseObtained == True:
         phraseHasObtained()
@@ -496,7 +561,7 @@ def lockwoodVillage():
 def daekrahmVillage():
     print()
     print("You have arrived at: Daekrahm Village")
-    time.sleep(0.5)
+    time.sleep(1)
     print("""
     LOCATION:
     ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
@@ -508,19 +573,19 @@ def daekrahmVillage():
     time.sleep(1)
     print("""
     *dog barks in the distance*""")
-    time.sleep(2)
+    time.sleep(1)
     print("""
     %s: What was that?""" % (characterName.upper()))
-    time.sleep(2)
+    time.sleep(1)
     print("""
     *dog barks again but louder*""")
-    time.sleep(2)
+    time.sleep(1)
     print()
     print("Do you approach?")
     time.sleep(1)
     choiceYes = input("- ")
     if choiceYes.lower() in yResponses:
-        time.sleep(0.5)
+        time.sleep(1)
         print("""
     DISCOVERY:
     ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
@@ -557,7 +622,7 @@ def gunDeath():
 def bryxtonTown():
     print()
     print("You have arrived at: Bryxton Town")
-    time.sleep(0.5)
+    time.sleep(1)
     print("""
     LOCATION:
     ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
@@ -631,12 +696,12 @@ def bryxtonTown():
             time.sleep(1)
             characterHealth = characterHealth - 1
             print("Your health is now at: %s" % (characterHealth))
-            time.sleep(2)
+            time.sleep(1)
             characterHealth = characterHealth - 1
             print("Your health is now at: %s" % (characterHealth))
-            time.sleep(2)
+            time.sleep(1)
             print("%s has died." % (characterName))
-            time.sleep(0.5)
+            time.sleep(1)
             print()
             print("Would you like to try again?")
             playAgain = input("- ")
@@ -658,7 +723,7 @@ def bryxtonTown():
                 print("Your health is now at: %s" % (characterHealth))
                 time.sleep(1)
             print("%s has died." % (characterName))
-            time.sleep(0.5)
+            time.sleep(1)
             print()
             print("Would you like to try again?")
             play2Again = input("- ")
@@ -674,7 +739,7 @@ def bryxtonTown():
 def azaleaVillage():
     print()
     print("You have arrived at: Azalea Village")
-    time.sleep(0.5)
+    time.sleep(1)
     print("""
     LOCATION:
     ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
@@ -686,33 +751,33 @@ def azaleaVillage():
     print("""
     VILLAGE PERSON 1: %s, welcome! It is amazing to see you, we have been awaiting your arrival.
                       You look so much better than we anticipated after your tiresome journey!""" % (characterName))
-    time.sleep(2)
+    time.sleep(1)
     print("""
     %s: How are you? How do you know who I am? This place is absolutely stunning, for once I can
            actually breath and not be looking over my shoulder constantly.""" % (characterName.upper()))
-    time.sleep(2)
+    time.sleep(1)
     print("""
     VILLAGER PERSON 3: We are good! The Traveller wrote to us informing us we were to be expecting you 
                        within the next few days, and here you are! We do have some news though which
                        may interest you . . .""")
-    time.sleep(2)
+    time.sleep(1)
     print("""
     %s: Is that so? Please, do tell. I have been making my way around the Realm and so far I am piecing
            together a few things that are now coming together, and I am curious to know what it is you have
            for me.""" % (characterName.upper()))
-    time.sleep(2)
+    time.sleep(1)
     print("""
     VILLAGER PERSON 2: Over the past week, our food supplies have been dwindling, we did not know why 
                        until one of the children saw a beast of some kind stealing food from one of our 
                        carts. When the beast saw the child, it ran towards The Snowy Mountains. It's 
                        been doing this for the past month, but it has been more frequent as of late.""")
-    time.sleep(2)
+    time.sleep(1)
     print("""
     YOUNG GIRL 2: Are you going to help us %s?""" % (characterName))
     time.sleep(1)
     choiceYes = input("- ")
     if choiceYes.lower() in yResponses:
-        time.sleep(0.5)
+        time.sleep(1)
         print("""
     YOUNG GIRL 2: Thank you so much %s! You are our hero!""" % (characterName.upper()))
         print()
@@ -731,7 +796,7 @@ def azaleaVillage():
 def theSnowyMountains():
     print()
     print("You have arrived at: The Snowy Mountains")
-    time.sleep(0.5)
+    time.sleep(1)
     print("""
     LOCATION:
     ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
@@ -745,7 +810,7 @@ def theSnowyMountains():
         print("Do you enter the cave?")
         enter = input("- ")
         if enter.lower() in yResponses:
-            time.sleep(0.5)
+            time.sleep(1)
             print("""
     SCENARIO:
     ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
@@ -789,7 +854,7 @@ def theSnowyMountains():
     and decide best to stay away from anyone you interacted with, you settle down in the cave and
     hope that nothing comes back.
                 """)
-                    time.sleep(2)
+                    time.sleep(1)
             elif enter.lower() in nResponses:
                 print("""
     SITUATION:
@@ -801,7 +866,7 @@ def theSnowyMountains():
                 characterHealth = characterHealth - characterHealth
                 time.sleep(1)
                 print("You slowly freeze to death due to your decisions")
-                time.sleep(2)
+                time.sleep(1)
                 print("Your health is now at: %s" % (characterHealth))
                 print("%s has died." % (characterName))
             elif read in nResponses:
@@ -815,7 +880,7 @@ def theSnowyMountains():
     and decide best to stay away from anyone you interacted with, you settle down in the cave and
     hope that nothing comes back.
                 """)
-                time.sleep(2)
+                time.sleep(1)
         elif enter.lower() in nResponses:
             print("""
     SITUATION:
@@ -827,7 +892,7 @@ def theSnowyMountains():
             characterHealth = characterHealth - characterHealth
             time.sleep(1)
             print("You slowly freeze to death due to your decisions")
-            time.sleep(2)
+            time.sleep(1)
             print("Your health is now at: %s" % (characterHealth))
             print("%s has died." % (characterName))
     else:
@@ -841,7 +906,7 @@ def theSnowyMountains():
         characterHealth = characterHealth - characterHealth
         time.sleep(1)
         print("You slowly freeze to death due to your decisions")
-        time.sleep(2)
+        time.sleep(1)
         print("Your health is now at: %s" % (characterHealth))
         print("%s has died." % (characterName))
         time.sleep(5)
@@ -858,7 +923,7 @@ def halingCove():
     global clawDamage
     print()
     print("You have arrived at: Haling Cove")
-    time.sleep(0.5)
+    time.sleep(1)
     print("""
     SITUATION:
     ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
@@ -872,7 +937,7 @@ def halingCove():
     helpCove = input("- ")
     if helpCove in yResponses:
         print()
-        time.sleep(0.5)
+        time.sleep(1)
         print("""
     SITUATION:
     ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
@@ -882,34 +947,34 @@ def halingCove():
         """ % (characterName))
         time.sleep(1)
         print("*you throw a punch at the beast*")
-        time.sleep(0.5)
+        time.sleep(1)
         print("*%s Damage Done*" % (characterDamage)) #Monster takes 2 HP
         frostGiantHealth = frostGiantHealth - characterDamage
-        time.sleep(0.5)
+        time.sleep(1)
         print("The Beast has %s Health Remaining" % (frostGiantHealth)) #Monster has 13 HP remaining
         time.sleep(1)
         print()
         print("*the beast slashes your back*")
-        time.sleep(0.5)
+        time.sleep(1)
         print("*%s Damage Done*" % (frostGiantDamage)) #Character takes 3 HP 
         characterHealth = characterHealth - frostGiantDamage
-        time.sleep(0.5)
+        time.sleep(1)
         print("%s has %s Health Remaining" % (characterName, characterHealth)) #Character has 7 HP remaining
         time.sleep(1)
         print()
         print("*a local rushes in and shoots the beast with an arrow*")
-        time.sleep(0.5)
+        time.sleep(1)
         print("*%s Damage Done*" % (arrowDamage)) #Monster takes 10 HP
         frostGiantHealth = frostGiantHealth - arrowDamage
-        time.sleep(0.5)
+        time.sleep(1)
         print("The Beast has %s Health Remaining" % (frostGiantHealth)) #Monster has 3 HP remaining
         time.sleep(1)
         print()
         print("*you scratch the monster with a nearby piece of wood*")
-        time.sleep(0.5)
+        time.sleep(1)
         print("*%s Damage Done*" % (characterDamage)) #Monster takes 2 HP
         frostGiantHealth = frostGiantHealth - characterDamage
-        time.sleep(0.5)
+        time.sleep(1)
         print("The Beast has %s Health Remaining" % (frostGiantHealth)) #Monster has 1 HP
         time.sleep(1)
         print()
@@ -928,10 +993,10 @@ def halingCove():
             """)
             time.sleep(1)
             print("*you swing the axe at the monsters head decapitating it*")
-            time.sleep(0.5)
+            time.sleep(1)
             print("*%s Damage Done*" % (axeDamage)) #Monster dies
             frostGiantHealth = frostGiantHealth - axeDamage
-            time.sleep(0.5)
+            time.sleep(1)
             print("The Beast has been slain, dropping its head")
             global beastHeadObtained
             beastHeadObtained = True
@@ -952,10 +1017,10 @@ def halingCove():
             """)
             time.sleep(1)
             print("*the Beast claws you face ripping your eyes out*")
-            time.sleep(0.5)
+            time.sleep(1)
             print("*%s Damage Done*" % (clawDamage)) #Charater dies
             characterHealth = characterHealth - clawDamage
-            time.sleep(0.5)
+            time.sleep(1)
             print("%s has died." % (characterName))
             time.sleep(1)
             print("""
@@ -969,7 +1034,7 @@ def halingCove():
             time.sleep(5)
     elif helpCove in nResponses:
         print()
-        time.sleep(0.5)
+        time.sleep(1)
         print("""
     SITUATION:
     ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
@@ -997,7 +1062,7 @@ def halingCove():
         time.sleep(5)
     else:
         print()
-        time.sleep(0.5)
+        time.sleep(1)
         print("""
     SITUATION:
     ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
@@ -1041,7 +1106,7 @@ def headObtained():
             print("""
     VILLAGER: Tell me about it *vomits*""")
             headObtained()
-    time.sleep(0.5)
+    time.sleep(1)
 
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 # Loading Oar's Rest Function
