@@ -5,9 +5,9 @@
 # 
 # =======================================================================================================================================
 # Notes:
-# Daekrahm Village, add something for choosing not to follow the footprints
-# 
-#
+# Haling Cove No option is done
+# Do Haling Cove Yes/Else option
+# Test Haling Cove
 #
 # =======================================================================================================================================
 # Imports:
@@ -27,12 +27,11 @@ characterHealth = 10
 characterDamage = 2
 frostGiantHealth = 15
 frostGiantDamage = 3
-spiderHealth = 5
-spiderDamage = 2
 boy1Damage = 1
 boy2Damage = 2
 boy3Damage = 3
 gunDamage = 10
+arrowDamage = 10
 
 # =======================================================================================================================================
 # Start of Game Introduction
@@ -415,10 +414,10 @@ def daekrahmVillage():
     print("""
     LOCATION:
 
-    As the water spits up from all the puddles beneath your feet, you find yourself amongst these cobweb riddened settlements,
-    windows all smashed in, boarded up which could only be described as as dried out cloth. Making do with what they have
-    available to them and not being as wealthy or profitable as the other villages and towns within their neighbouring
-    vacinity.""")
+    As the water spits up from all the puddles beneath your feet, you find yourself amongst these cobweb
+    riddened settlements, windows all smashed in, boarded up which could only be described as as dried 
+    out cloth. Making do with what they have available to them and not being as wealthy or profitable 
+    as the other villages and towns within their neighbouring vacinity.""")
     time.sleep(1)
     print("""
     *dog barks in the distance*""")
@@ -437,9 +436,11 @@ def daekrahmVillage():
         time.sleep(0.5)
         print("""
     DISCOVERY:
-
-    As you approach the dog barking towards the back of the Village, you find large footprints in the snow beneath
-    your feet, this snow coming from the mountains ahead. The dog seems unsettled and disturbed by these footprints.
+        
+    As you approach the dog barking towards the back of the Village, you find large footprints in the 
+    snow beneath your feet, this snow coming from the mountains ahead. The dog seems unsettled and 
+    disturbed by these footprints. 
+    
     Where do you go next?
         """)
         secondLocationDirections()
@@ -471,9 +472,9 @@ def bryxtonTown():
     print("""
     LOCATION:
 
-    Storm clouds gather above, doors slam shut with there locks being clasped together and shutters forgotten. Anyone who
-    is anyone within this gruesome town is in all black, hoods and masks on, keeping themselves to themselves. The streets cobbled,
-    and littered with unwanted children.""")
+    Storm clouds gather above, doors slam shut with there locks being clasped together and shutters 
+    forgotten. Anyone who is anyone within this gruesome town is in all black, hoods and masks on, 
+    keeping themselves to themselves. The streets cobbled, and littered with unwanted children.""")
     time.sleep(1)
     print("""
     BOY ONE: Excuse me Mister, are you lost?""")
@@ -491,6 +492,7 @@ def bryxtonTown():
         gunDeath()
     elif lostIN.lower() in nResponses:
         print()
+        global characterHealth
         print("Your health is currently at: %s" % (characterHealth))
         time.sleep(1)
         print("""
@@ -507,8 +509,8 @@ def bryxtonTown():
     SITUATION:
 
     The boys drag you into The Black Forest neighbouring Bryxton Town and throw you down in a bush full
-    of poison ivy and berries. Not only do they leave you there, but before they do, they throw a couple more
-    punches and kicks in to weaken you further.
+    of poison ivy and berries. Not only do they leave you there, but before they do, they throw a couple 
+    more punches and kicks in to weaken you further.
         """)
         characterHealth = characterHealth - boy1Damage
         time.sleep(1)
@@ -523,7 +525,7 @@ def bryxtonTown():
         if getUp in yResponses: 
             time.sleep(1)
             print()
-            print("*Boy 3 headbutts you knocking you back down to the floor knocking you unconious* - 5 Health")
+            print("*Boy 3 headbutts you knocking you back down to the floor knocking you unconcious* - 5 Health")
             characterHealth = characterHealth - 5
             time.sleep(1)
             print("Your health is now at: %s" % (characterHealth))
@@ -583,9 +585,9 @@ def azaleaVillage():
     print("""
     LOCATION:
 
-    For the first time in your travels, you are met by utter bliss. Flowers blossom, homes thrive, children
-    are laughing, singing, having fun. Everyone is smiling, the sun is shining down on you, and for once
-    it seems as though the world has come to peace.""")
+    For the first time in your travels, you are met by utter bliss. Flowers blossom, homes thrive, 
+    children are laughing, singing, having fun. Everyone is smiling, the sun is shining down on you, 
+    and for once it seems as though the world has come to peace.""")
     time.sleep(1)#Set to 15 seconds once done
     print("""
     VILLAGE PERSON 1: %s, welcome! It is amazing to see you, we have been awaiting your arrival.
@@ -606,10 +608,10 @@ def azaleaVillage():
            for me.""" % (characterName.upper()))
     time.sleep(2)
     print("""
-    VILLAGER PERSON 2: Over the past week, our food supplies have been dwindling, we did not know why until
-                       one of the children saw a beast of some kind stealing food from one of our carts. When the beast saw
-                       the child, it ran towards The Snowy Mountains. It's been doing this for the past month, but it has been
-                       more frequent as of late.""")
+    VILLAGER PERSON 2: Over the past week, our food supplies have been dwindling, we did not know why 
+                       until one of the children saw a beast of some kind stealing food from one of our 
+                       carts. When the beast saw the child, it ran towards The Snowy Mountains. It's 
+                       been doing this for the past month, but it has been more frequent as of late.""")
     time.sleep(2)
     print("""
     YOUNG GIRL 2: Are you going to help us %s?""" % (characterName))
@@ -634,6 +636,124 @@ def azaleaVillage():
 # =======================================================================================================================================
 def theSnowyMountains():
     print()
+    print("You have arrived at: The Snowy Mountains")
+    time.sleep(0.5)
+    print("""
+    LOCATION:
+
+    As %s travereses up the snowy mountain side, their vision weakens as the snow becomes thicker.
+    With the Old Boot lodged in their bag and the weather worsening, they pick up pace to find shelter.
+    An old, rotten, dripping cave is dug out in the side of the cliff as they approache.""" % (characterName))
+    print()
+    time.sleep(1)
+    if bootObtained == True and phraseObtained == True:
+        print("Do you enter the cave?")
+        enter = input("- ")
+        if enter.lower() in yResponses:
+            time.sleep(0.5)
+            print("""
+    SCENARIO:
+
+    As you enter the cave, you find many markings lining the walls, large footprints engraved into the
+    ground beneath you. Against the back wall of the cave as you approach appears to be a large rotting
+    tooth, bigger than any normal mans. However, beneath this tooth appears to be a form of parchment.
+
+    Do you read the note?
+            """)
+            print()
+            time.sleep(1)
+            read = input("- ")
+            if read in yResponses:
+                time.sleep(1)
+                print()
+                print("~~~~~~ Cove")
+                time.sleep(5)
+                secondLocationDirections()
+            elif read in nResponses:
+                time.sleep(1)
+                print()
+                print("""
+    SITUATION:
+
+    With all the markings you find, you decide it is better if you no longer continue with the quest
+    and decide best to stay away from anyone you interacted with, you settle down in the cave and
+    hope that nothing comes back.
+                """)
+                time.sleep(2)
+        elif enter.lower() in nResponses:
+            print("""
+    SITUATION:
+
+    The weather worsens rapidly and the cave spooks %s way too much.
+        """ % (characterName))
+            print("Your health is now at: %s" % (characterHealth))
+            characterHealth = characterHealth - characterHealth
+            time.sleep(1)
+            print("You slowly freeze to death due to your decisions")
+            time.sleep(2)
+            print("Your health is now at: %s" % (characterHealth))
+            print("%s has died." % (characterName))
+    else:
+        print("""
+    SITUATION:
+
+    The weather worsens rapidly and the cave spooks %s way too much.
+        """ % (characterName))
+        print("Your health is now at: %s" % (characterHealth))
+        characterHealth = characterHealth - characterHealth
+        time.sleep(1)
+        print("You slowly freeze to death due to your decisions")
+        time.sleep(2)
+        print("Your health is now at: %s" % (characterHealth))
+        print("%s has died." % (characterName))
+        time.sleep(5)
+
+# =======================================================================================================================================
+# Location Seven (Third Choice Path)
+# =======================================================================================================================================
+def halingCove():
+    print()
+    print("You have arrived at: Haling Cove")
+    time.sleep(0.5)
+    print("""
+    SITUATION:
+
+    As %s approaches the Cove, fire can be seen billowing from the rooftops as well as the screams and
+    cries of children running away, being abandoned by their parents as everyone scatters to escape
+    from something.
+    
+    Do you help Haling Cove?""" % (characterName))
+    time.sleep(1)#Set to 15 seconds once done
+    helpCove = input("- ")
+    if helpCove in yResponses:
+        print()
+    elif helpCove in nResponses:
+        print()
+        time.sleep(0.5)
+        print("""
+    SITUATION:
+
+    %s starts to run away from the Cove, not to abandon them, but to go and get more help as they can
+    see this is too much for them to handle on their own! All of a sudden a whoosh can be heard passing
+    their ear . . .
+        """ % (characterName))
+        time.sleep(1)
+        print("Your health is now at: %s" % (characterHealth))
+        time.sleep(1)
+        print("*You get shot by an arrow right into their heart* - %s Health" % (arrowDamage))
+        time.sleep(1)
+        print("""
+    SITUATION:
+
+    You begin to collapse to the floor, knees buckle beneath you and you take your final breath, the
+    arrow unable to be taken out without ripping your heart out along with it.
+        """)
+        time.sleep(1)
+        print("Your health is now at: %s" % (characterHealth))
+        time.sleep(1)
+        print("%s has died." % (characterName))
+        time.sleep(5)
+
 
 # =======================================================================================================================================
 # Loading Oar's Rest Function
@@ -724,6 +844,21 @@ def loadingAzaleaVillage():
                 print("\b \b"*spaces, end="")
                 spaces = 0
     azaleaVillage()
+
+# =======================================================================================================================================
+# Loading Traveller Function
+# =======================================================================================================================================
+def loadingTheSnowyMountains():
+    spaces = 0
+    for a in range (random.randint(1,3)):
+        for b in range(10):
+            print("\b "*spaces+".", end="", flush=True)
+            spaces = spaces + 1
+            time.sleep(0.2)
+            if (spaces >= 10):
+                print("\b \b"*spaces, end="")
+                spaces = 0
+    theSnowyMountains()
 
 # =======================================================================================================================================
 # Loading Traveller Function
