@@ -17,6 +17,7 @@ import random
 import time
 bootObtained = False
 phraseObtained = False
+beastHeadObtained = False
 yResponses = ["yes","ye","yeah","y","yea","ok","k","kk","okay","okie","oki","correct","corrct","si","sure"]
 nResponses = ["no","n","nah","nein","non","pass","never"]
 
@@ -727,6 +728,22 @@ def halingCove():
     helpCove = input("- ")
     if helpCove in yResponses:
         print()
+        time.sleep(0.5)
+        print("""
+    SITUATION:
+
+    %s charges into the Cove with residents passing by running away, fearing their life. Fury in your 
+    eyes and determination to finish the quest and come to a conclusion.
+        """ % (characterName))
+        time.sleep(1)
+        print("*you throw a punch at the beast*")
+        time.sleep(0.5)
+        print("*%s Damage done*" % (characterDamage))
+        global frostGiantHealth
+        frostGiantHealth = frostGiantHealth - characterDamage
+        time.sleep(0.5)
+        print("The Beast has %s Health remaining" % (frostGiantHealth))
+        
     elif helpCove in nResponses:
         print()
         time.sleep(0.5)
@@ -745,14 +762,27 @@ def halingCove():
         print("""
     SITUATION:
 
-    You begin to collapse to the floor, knees buckle beneath you and you take your final breath, the
+    %s begins to collapse to the floor, knees buckle beneath you and you take your final breath, the
     arrow unable to be taken out without ripping your heart out along with it.
-        """)
+        """ % (characterName))
         time.sleep(1)
         print("Your health is now at: %s" % (characterHealth))
         time.sleep(1)
         print("%s has died." % (characterName))
         time.sleep(5)
+    else:
+        print()
+        time.sleep(0.5)
+        print("""
+    SITUATION:
+
+    %s begins to run away from Haling Cove without any other thoughts or doubt on the entirity of the
+    situation. Looking back at the chaos you do not regret your choice and continue to run. However,
+    as you are running, village people appear out of the bushes and call you a traitor and a coward.
+            """ % (characterName))
+        print()
+        time.sleep(1)
+        gunDeath()
 
 
 # =======================================================================================================================================
