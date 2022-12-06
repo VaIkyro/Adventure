@@ -115,11 +115,17 @@ def locationDirections():
 # Second Location Directions
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 def secondLocationDirections():
-    print("1 - Bryxton Town")
-    print("2 - Azalea Village")
-    print("3 - The Snowy Mountains")
+    print("""
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        ┃ Where would you like to go? ┃
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """)
+    print("        ➀ - Bryxton Town")
+    print("        ➁ - Azalea Village")
+    print("        ➂ - The Snowy Mountains")
     print()
     choiceTwo = input("- ")
+    print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     if choiceTwo == "1":
         loadingBryxtonTown()
     elif choiceTwo == "2":
@@ -146,7 +152,9 @@ def travellerContinued():
         print("       Excellent! Let's get this started!")
         locationDirections()
     else:
+        print()
         print("I am sorry to hear that, please, excuse me")
+        time.sleep(5)
 
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 # The Traveller
@@ -408,6 +416,7 @@ def oarRest():
     elif yesChoice.lower() in nResponses:
         print("""
     〈 OLD MAN: 〉 Well, it was nice to see you, goodbye!""")
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
 
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 # Boot Obtained
@@ -506,7 +515,9 @@ def lockwoodVillage():
         """)
         time.sleep(1)
     elif choiceYes.lower() in nResponses:
+        print()
         print("〈 YOUNG GIRL: 〉 It was nice to see you " + characterName + ", but I need to go!")
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
 
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 # Phrase Obtained
@@ -520,6 +531,7 @@ def lockwoodVillage():
         print("        ➀ - What was that saying you just mentioned?")
         print("        ➁ - What game are you playing?")
         print("        ➂ - Excuse me little girl.")
+        print()
         bootChoice = input("- ")
         print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
         if bootChoice == "1":
@@ -527,8 +539,7 @@ def lockwoodVillage():
     〈 YOUNG GIRL: 〉 Oh that! It's this old saying my mama tells me and my siblings, we don't exactly
                       know what it means or where it came from, but our mama says it came from this old
                       adventurer who went our adventuring and got lost down a hole in the middle of 
-                      nowhere, maybe go back to The Traveller and teach him of the phrase! 
-                """)
+                      nowhere, maybe go back to The Traveller and teach him of the phrase! """)
             print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             time.sleep(1)
             print()
@@ -564,7 +575,7 @@ def daekrahmVillage():
     time.sleep(1)
     print("""
     LOCATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     As the water spits up from all the puddles beneath your feet, you find yourself amongst these cobweb
     riddened settlements, windows all smashed in, boarded up which could only be described as as dried 
@@ -572,41 +583,46 @@ def daekrahmVillage():
     as the other villages and towns within their neighbouring vacinity.""")
     time.sleep(1)
     print("""
-    *dog barks in the distance*""")
+    « dog barks in the distance »""")
     time.sleep(1)
     print("""
-    %s: What was that?""" % (characterName.upper()))
+    〈 %s: 〉 What was that?""" % (characterName.upper()))
     time.sleep(1)
     print("""
-    *dog barks again but louder*""")
+    « dog barks again but louder »""")
     time.sleep(1)
+    print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     print()
-    print("Do you approach?")
+    choiceYes = input("Do you approach? - ")
     time.sleep(1)
-    choiceYes = input("- ")
+    print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     if choiceYes.lower() in yResponses:
         time.sleep(1)
         print("""
     DISCOVERY:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
         
     As you approach the dog barking towards the back of the Village, you find large footprints in the 
     snow beneath your feet, this snow coming from the mountains ahead. The dog seems unsettled and 
     disturbed by these footprints. 
     
-    Where do you go next?
+▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+
+             Where do you go next?
         """)
         secondLocationDirections()
     elif choiceYes.lower() in nResponses:
         print("""
     DECISION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     You slowly turn your back to the dog and walk away.
             """)
 
 def gunDeath():
     global gunDamage
+    print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
+    print()
     print("*a gun shot sounds from a nearby building, piercing your skull* - %s Health" % (gunDamage))
     global characterHealth
     characterHealth = characterHealth - gunDamage
@@ -614,6 +630,8 @@ def gunDeath():
     print("Your health is currently at: %s" % (characterHealth))
     time.sleep(1)
     print("%s has died." % (characterName))
+    print()
+    print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     time.sleep(1)
     print()
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
@@ -625,23 +643,24 @@ def bryxtonTown():
     time.sleep(1)
     print("""
     LOCATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     Storm clouds gather above, doors slam shut with there locks being clasped together and shutters 
     forgotten. Anyone who is anyone within this gruesome town is in all black, hoods and masks on, 
     keeping themselves to themselves. The streets cobbled, and littered with unwanted children.""")
     time.sleep(1)
     print("""
-    BOY ONE: Excuse me Mister, are you lost?""")
+    〈 BOY ONE: 〉 Excuse me Mister, are you lost?
+    """)
     time.sleep(1)
     lostIN = input("- ")
     if lostIN.lower() in yResponses:
         time.sleep(1)
         print("""
-    %s: Yes, I am, could you help me?""" % (characterName.upper()))
+    〈 %s: 〉 Yes, I am, could you help me?""" % (characterName.upper()))
         time.sleep(1)
         print("""
-    BOY THREE: No. You should never have come here!
+    〈 BOY THREE: 〉 No. You should never have come here!
         """)
         time.sleep(1)
         gunDeath()
@@ -651,7 +670,7 @@ def bryxtonTown():
         print("Your health is currently at: %s" % (characterHealth))
         time.sleep(1)
         print("""
-    BOY TWO: No need to be rude""")
+    〈 BOY TWO: 〉 No need to be rude""")
         time.sleep(1)
         print()
         global boy2Damage
@@ -662,7 +681,7 @@ def bryxtonTown():
         time.sleep(1)
         print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     The boys drag you into The Black Forest neighbouring Bryxton Town and throw you down in a bush full
     of poison ivy and berries. Not only do they leave you there, but before they do, they throw a couple 
@@ -688,7 +707,7 @@ def bryxtonTown():
             time.sleep(1)
             print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     Due to the poisonous entities around you and the state of your conciousness, you are left, stranded.
     Your health starts to deplete . . .
@@ -713,7 +732,7 @@ def bryxtonTown():
             time.sleep(1)
             print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     You refuse to get up and give in to your decision.
             """)
@@ -742,7 +761,7 @@ def azaleaVillage():
     time.sleep(1)
     print("""
     LOCATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     For the first time in your travels, you are met by utter bliss. Flowers blossom, homes thrive, 
     children are laughing, singing, having fun. Everyone is smiling, the sun is shining down on you, 
