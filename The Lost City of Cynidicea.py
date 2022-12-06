@@ -654,6 +654,7 @@ def bryxtonTown():
     """)
     time.sleep(1)
     lostIN = input("- ")
+    print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     if lostIN.lower() in yResponses:
         time.sleep(1)
         print("""
@@ -667,17 +668,26 @@ def bryxtonTown():
     elif lostIN.lower() in nResponses:
         print()
         global characterHealth
-        print("Your health is currently at: %s" % (characterHealth))
+        print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
         time.sleep(1)
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
         print("""
     〈 BOY TWO: 〉 No need to be rude""")
         time.sleep(1)
         print()
         global boy2Damage
-        print("*Boy Two throws a punch at you* - %s Health" % (boy2Damage))
+        print("« Boy Two throws a punch at you » - %s Health" % (boy2Damage))
         time.sleep(1)
         characterHealth = characterHealth - boy2Damage
-        print("Your health is now at: %s" % (characterHealth))
+        print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
         time.sleep(1)
         print("""
     SITUATION:
@@ -689,9 +699,13 @@ def bryxtonTown():
         """)
         characterHealth = characterHealth - boy1Damage
         time.sleep(1)
-        print("*Boy 1 kicks you* - %s Health" % (boy1Damage))
+        print("« Boy 1 kicks you » - %s Health" % (boy1Damage))
         time.sleep(1)
-        print("Your health is now at: %s" % (characterHealth))
+        print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
         print()
         time.sleep(1)
         print("Do you try to get back up? ")
@@ -700,10 +714,14 @@ def bryxtonTown():
         if getUp in yResponses: 
             time.sleep(1)
             print()
-            print("*Boy 3 headbutts you knocking you back down to the floor knocking you unconcious* - 5 Health")
+            print("« Boy 3 headbutts you knocking you back down to the floor knocking you unconcious » - 5 Health")
             characterHealth = characterHealth - 5
             time.sleep(1)
-            print("Your health is now at: %s" % (characterHealth))
+            print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
             time.sleep(1)
             print("""
     SITUATION:
@@ -714,10 +732,18 @@ def bryxtonTown():
             """)
             time.sleep(1)
             characterHealth = characterHealth - 1
-            print("Your health is now at: %s" % (characterHealth))
+            print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
             time.sleep(1)
             characterHealth = characterHealth - 1
-            print("Your health is now at: %s" % (characterHealth))
+            print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
             time.sleep(1)
             print("%s has died." % (characterName))
             time.sleep(1)
@@ -739,7 +765,11 @@ def bryxtonTown():
             time.sleep(1)
             for i in range(6):
                 characterHealth = characterHealth - 1
-                print("Your health is now at: %s" % (characterHealth))
+                print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
                 time.sleep(1)
             print("%s has died." % (characterName))
             time.sleep(1)
