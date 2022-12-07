@@ -233,7 +233,7 @@ def bootPhraseHead():
                 time.sleep(1)
                 print("""
     VICTORY ENDING:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 
     Congratulations! You defeated the Beast, obtained every item, and presented the head to
     The Traveller!
@@ -803,17 +803,17 @@ def azaleaVillage():
     time.sleep(1)#Set to 15 seconds once done
     print("""
     〈 VILLAGE PERSON 1: 〉  %s, welcome! It is amazing to see you, we have been awaiting your 
-                               arrival. You look so much better than we anticipated after your 
-                               tiresome journey!""" % (characterName))
+                            arrival. You look so much better than we anticipated after your 
+                            tiresome journey!""" % (characterName))
     time.sleep(1)
     print("""
-    %s: How are you? How do you know who I am? This place is absolutely stunning, for once I can
-           actually breath and not be looking over my shoulder constantly.""" % (characterName.upper()))
+    〈 %s: 〉 How are you? How do you know who I am? This place is absolutely stunning, for once I can
+                 actually breath and not be looking over my shoulder constantly.""" % (characterName.upper()))
     time.sleep(1)
     print("""
     〈 VILLAGE PERSON 3: 〉 We are good! The Traveller wrote to us informing us we were to be expecting 
-                               you within the next few days, and here you are! We do have some news 
-                               though which may interest you . . .""")
+                            you within the next few days, and here you are! We do have some news 
+                            though which may interest you . . .""")
     time.sleep(1)
     print("""
     〈 %s: 〉 Is that so? Please, do tell. I have been making my way around the Realm and so far I am 
@@ -822,15 +822,18 @@ def azaleaVillage():
     time.sleep(1)
     print("""
     〈 VILLAGE PERSON 2: 〉 Over the past week, our food supplies have been dwindling, we did not know why 
-                               until one of the children saw a beast of some kind stealing food from one 
-                               of our carts. When the beast saw the child, it ran towards The Snowy 
-                               Mountains. It's been doing this for the past month, but it has been more 
-                               frequent as of late.""")
+                            until one of the children saw a beast of some kind stealing food from one 
+                            of our carts. When the beast saw the child, it ran towards The Snowy 
+                            Mountains. It's been doing this for the past month, but it has been more 
+                            frequent as of late.""")
     time.sleep(1)
+    print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     print("""
     〈 YOUNG GIRL 2: 〉 Are you going to help us %s?""" % (characterName))
     time.sleep(1)
+    print()
     choiceYes = input("- ")
+    print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     if choiceYes.lower() in yResponses:
         time.sleep(1)
         print("""
@@ -866,7 +869,9 @@ def theSnowyMountains():
     time.sleep(1)
     if bootObtained == True and phraseObtained == True:
         print("Do you enter the cave?")
+        print()
         enter = input("- ")
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
         if enter.lower() in yResponses:
             time.sleep(1)
             print("""
@@ -877,14 +882,17 @@ def theSnowyMountains():
     ground beneath you. Against the back wall of the cave as you approach appears to be a large rotting
     tooth, bigger than any normal mans. However, beneath this tooth appears to be a form of parchment.
 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+
     Do you read the note?
             """)
             time.sleep(1)
             read = input("- ")
             if read in yResponses:
                 time.sleep(1)
+                print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
                 print()
                 print("~~~~~~ Cove")
+                print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
                 time.sleep(1)
                 print()
                 print("""
@@ -894,9 +902,11 @@ def theSnowyMountains():
     Reading the note you realise something is wrong and that whatever lived within this abandoned cave
     must have made its way towards Haling Cove!
 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+
     Do you go towards Haling Cove?
                 """)
                 goHaling = input("- ")
+                print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
                 if goHaling in yResponses:
                     time.sleep(1)
                     loadingHalingCove()
@@ -1013,10 +1023,12 @@ def halingCove():
     cries of children running away, being abandoned by their parents as everyone scatters to escape
     from something.
 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+
     Do you help Haling Cove?
     """ % (characterName))
     time.sleep(1)#Set to 15 seconds once done
     helpCove = input("- ")
+    print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     if helpCove in yResponses:
         print()
         time.sleep(1)
@@ -1034,40 +1046,53 @@ def halingCove():
         print("*%s Damage Done*" % (characterDamage)) #Monster takes 2 HP
         frostGiantHealth = frostGiantHealth - characterDamage
         time.sleep(1)
-        print("The Beast has %s Health Remaining" % (frostGiantHealth)) #Monster has 13 HP remaining
+        print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃The Beast has %s Health Remaining┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (frostGiantHealth)) #Monster has 13 HP remaining
         print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
         input()
-        print()
         print("*the beast slashes your back*")
         time.sleep(1)
         print("*%s Damage Done*" % (frostGiantDamage)) #Character takes 3 HP 
         characterHealth = characterHealth - frostGiantDamage
         time.sleep(1)
-        print("%s has %s Health Remaining" % (characterName, characterHealth)) #Character has 7 HP remaining
+        print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
         print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
         input()
-        print()
         print("*a local rushes in and shoots the beast with an arrow*")
         time.sleep(1)
         print("*%s Damage Done*" % (arrowDamage)) #Monster takes 10 HP
         frostGiantHealth = frostGiantHealth - arrowDamage
         time.sleep(1)
-        print("The Beast has %s Health Remaining" % (frostGiantHealth)) #Monster has 3 HP remaining
+        print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃The Beast has %s Health Remaining┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (frostGiantHealth)) #Monster has 3 HP remaining
         print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
         input()
-        print()
         print("*you scratch the monster with a nearby piece of wood*")
         time.sleep(1)
         print("*%s Damage Done*" % (characterDamage)) #Monster takes 2 HP
         frostGiantHealth = frostGiantHealth - characterDamage
         time.sleep(1)
-        print("The Beast has %s Health Remaining" % (frostGiantHealth)) #Monster has 1 HP
+        print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃The Beast has %s Health Remaining┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (frostGiantHealth)) #Monster has 1 HP remaining
         print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
         input()
-        print()
         print("Do you finish the Beast off?")
         print()
         decisionKill = input("- ")
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
         if decisionKill in yResponses:
             print()
             time.sleep(1)
@@ -1087,6 +1112,7 @@ def halingCove():
             frostGiantHealth = frostGiantHealth - axeDamage
             time.sleep(1)
             print("The Beast has been slain, dropping its head")
+            print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             input()
             global beastHeadObtained
             beastHeadObtained = True
@@ -1173,31 +1199,40 @@ def halingCove():
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 def headObtained():
     print("""
-    DECISION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-
-    1 - What do I do with this head?
-    2 - I'll leave this head here as a trophy!
-    3 - That's gross.
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        ┃           Options           ┃
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
         """)
+    print("        ➀ - What do I do with this head?")
+    print("        ➁ - I'll leave this head here as a trophy!")
+    print("        ➂ - That's gross.")
+    print()
     headChoice = input("- ")
+    print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     if headChoice == "1":
         print("""
-    VILLAGER: Maybe take it back to the Traveller and see what he has to say?""")
+    〈 Villager: 〉 Maybe take it back to the Traveller and see what he has to say?""")
         time.sleep(1)
         print()
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
+        print()
         rtIN = input("Would you like to go back to the Traveller? - ")
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
         if rtIN in yResponses:
             returnTraveller()
         elif rtIN in nResponses:
             headObtained()
         elif headChoice == "2":
             print("""
-    VILLAGER: Thank you so much! You are amazing, what are you going to do now?""")
+    〈 Villager: 〉 Thank you so much! You are amazing, what are you going to do now?""")
+            print()
+            print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             headObtained()
         elif headChoice == "3":
             print("""
-    VILLAGER: Tell me about it *vomits*""")
+    〈 Villager: 〉 Tell me about it *vomits*""")
+            print()
+            print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
             headObtained()
     time.sleep(1)
 
@@ -1327,4 +1362,5 @@ def loadingHalingCove():
 if loadingTravellerChoice.lower() in yResponses:
     loadingTraveller()
 elif loadingTravellerChoice.lower() in nResponses:
+    print()
     print("I am sorry to hear that, please, excuse me")
