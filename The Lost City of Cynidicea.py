@@ -5,13 +5,14 @@
 # 
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 # Notes:
-# 
+# Formatting currently Lockwood onwards
 # 
 # 
 #
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 # Imports:
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
+import os
 import random
 import time
 bootObtained = False
@@ -443,9 +444,9 @@ def oarRest():
             print()
             rtIN = input("    Would you like to go back to the Traveller? - ")
             print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
-            if rtIN in yResponses:
+            if rtIN.lower() in yResponses:
                 returnTraveller()
-            elif rtIN in nResponses:
+            elif rtIN.lower() in nResponses:
                 locationDirections()
         elif bootChoice == "2":
             time.sleep(1)
@@ -544,9 +545,9 @@ def lockwoodVillage():
             print()
             rtIN = input("Would you like to go back to the Traveller? - ")
             print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
-            if rtIN in yResponses:
+            if rtIN.lower() in yResponses:
                 returnTraveller()
-            elif rtIN in nResponses:
+            elif rtIN.lower() in nResponses:
                 locationDirections()
         elif bootChoice == "2":
             print("""
@@ -717,7 +718,7 @@ def bryxtonTown():
         time.sleep(1)
         getUp = input("- ")
         print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
-        if getUp in yResponses: 
+        if getUp.lower() in yResponses: 
             time.sleep(1)
             print()
             print("« Boy 3 headbutts you knocking you back down to the floor knocking you unconcious » - 5 Health")
@@ -756,11 +757,11 @@ def bryxtonTown():
             print()
             print("Would you like to try again?")
             playAgain = input("- ")
-            if playAgain in yResponses:
+            if playAgain.lower() in yResponses:
                 theTraveller()
-            elif playAgain in nResponses:
+            elif playAgain.lower() in nResponses:
                 print()
-        elif getUp in nResponses:
+        elif getUp.lower() in nResponses:
             time.sleep(1)
             print("""
     SITUATION:
@@ -782,9 +783,9 @@ def bryxtonTown():
             print()
             print("Would you like to try again?")
             play2Again = input("- ")
-            if play2Again in yResponses:
+            if play2Again.lower() in yResponses:
                 theTraveller()
-            elif play2Again in nResponses:
+            elif play2Again.lower() in nResponses:
                 print()
 
 
@@ -889,7 +890,7 @@ def theSnowyMountains():
             """)
             time.sleep(1)
             read = input("- ")
-            if read in yResponses:
+            if read.lower() in yResponses:
                 time.sleep(1)
                 print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
                 print()
@@ -909,10 +910,10 @@ def theSnowyMountains():
                 """)
                 goHaling = input("- ")
                 print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
-                if goHaling in yResponses:
+                if goHaling.lower() in yResponses:
                     time.sleep(1)
                     loadingHalingCove()
-                elif goHaling in nResponses:
+                elif goHaling.lower() in nResponses:
                     time.sleep(1)
                     print()
                     print("""
@@ -946,7 +947,7 @@ def theSnowyMountains():
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
         """ % (characterHealth))
                 print("%s has died." % (characterName))
-            elif read in nResponses:
+            elif read.lower() in nResponses:
                 time.sleep(1)
                 print()
                 print("""
@@ -1031,7 +1032,7 @@ def halingCove():
     time.sleep(1)#Set to 15 seconds once done
     helpCove = input("- ")
     print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
-    if helpCove in yResponses:
+    if helpCove.lower() in yResponses:
         print()
         time.sleep(1)
         print("""
@@ -1095,7 +1096,7 @@ def halingCove():
         print()
         decisionKill = input("- ")
         print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
-        if decisionKill in yResponses:
+        if decisionKill.lower() in yResponses:
             print()
             time.sleep(1)
             print("""
@@ -1125,7 +1126,7 @@ def halingCove():
         """)
             time.sleep(1)
             headObtained()
-        elif decisionKill in nResponses:
+        elif decisionKill.lower() in nResponses:
             print()
             time.sleep(1)
             print("""
@@ -1153,7 +1154,7 @@ def halingCove():
     got you killed, fills him with emotion he doesn't know how to handle.
             """)
             time.sleep(5)
-    elif helpCove in nResponses:
+    elif helpCove.lower() in nResponses:
         print()
         time.sleep(1)
         print("""
@@ -1220,9 +1221,9 @@ def headObtained():
         print()
         rtIN = input("Would you like to go back to the Traveller? - ")
         print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
-        if rtIN in yResponses:
+        if rtIN.lower() in yResponses:
             returnTraveller()
-        elif rtIN in nResponses:
+        elif rtIN.lower() in nResponses:
             headObtained()
         elif headChoice == "2":
             print("""
