@@ -623,11 +623,15 @@ def gunDeath():
     global gunDamage
     print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
     print()
-    print("*a gun shot sounds from a nearby building, piercing your skull* - %s Health" % (gunDamage))
+    print("« a gun shot sounds from a nearby building, piercing your skull » - %s Health" % (gunDamage))
     global characterHealth
     characterHealth = characterHealth - gunDamage
     time.sleep(1)
-    print("Your health is currently at: %s" % (characterHealth))
+    print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
     time.sleep(1)
     print("%s has died." % (characterName))
     print()
@@ -798,43 +802,45 @@ def azaleaVillage():
     and for once it seems as though the world has come to peace.""")
     time.sleep(1)#Set to 15 seconds once done
     print("""
-    VILLAGE PERSON 1: %s, welcome! It is amazing to see you, we have been awaiting your arrival.
-                      You look so much better than we anticipated after your tiresome journey!""" % (characterName))
+    〈 VILLAGE PERSON 1: 〉  %s, welcome! It is amazing to see you, we have been awaiting your 
+                               arrival. You look so much better than we anticipated after your 
+                               tiresome journey!""" % (characterName))
     time.sleep(1)
     print("""
     %s: How are you? How do you know who I am? This place is absolutely stunning, for once I can
            actually breath and not be looking over my shoulder constantly.""" % (characterName.upper()))
     time.sleep(1)
     print("""
-    VILLAGER PERSON 3: We are good! The Traveller wrote to us informing us we were to be expecting you 
-                       within the next few days, and here you are! We do have some news though which
-                       may interest you . . .""")
+    〈 VILLAGE PERSON 3: 〉 We are good! The Traveller wrote to us informing us we were to be expecting 
+                               you within the next few days, and here you are! We do have some news 
+                               though which may interest you . . .""")
     time.sleep(1)
     print("""
-    %s: Is that so? Please, do tell. I have been making my way around the Realm and so far I am piecing
-           together a few things that are now coming together, and I am curious to know what it is you have
-           for me.""" % (characterName.upper()))
+    〈 %s: 〉 Is that so? Please, do tell. I have been making my way around the Realm and so far I am 
+                 piecing together a few things that are now coming together, and I am curious to know 
+                 what it is you have for me.""" % (characterName.upper()))
     time.sleep(1)
     print("""
-    VILLAGER PERSON 2: Over the past week, our food supplies have been dwindling, we did not know why 
-                       until one of the children saw a beast of some kind stealing food from one of our 
-                       carts. When the beast saw the child, it ran towards The Snowy Mountains. It's 
-                       been doing this for the past month, but it has been more frequent as of late.""")
+    〈 VILLAGE PERSON 2: 〉 Over the past week, our food supplies have been dwindling, we did not know why 
+                               until one of the children saw a beast of some kind stealing food from one 
+                               of our carts. When the beast saw the child, it ran towards The Snowy 
+                               Mountains. It's been doing this for the past month, but it has been more 
+                               frequent as of late.""")
     time.sleep(1)
     print("""
-    YOUNG GIRL 2: Are you going to help us %s?""" % (characterName))
+    〈 YOUNG GIRL 2: 〉 Are you going to help us %s?""" % (characterName))
     time.sleep(1)
     choiceYes = input("- ")
     if choiceYes.lower() in yResponses:
         time.sleep(1)
         print("""
-    YOUNG GIRL 2: Thank you so much %s! You are our hero!""" % (characterName.upper()))
+    〈 YOUNG GIRL 2: 〉 Thank you so much %s! You are our hero!""" % (characterName))
         print()
         time.sleep(1)
         secondLocationDirections()
     elif choiceYes.lower() in nResponses:
         print()
-        print("YOUNG GIRL 2: Oh . . . that's sad to hear.")
+        print("〈 YOUNG GIRL 2: 〉 Oh . . . that's sad to hear.")
         time.sleep(1)
         print()
         gunDeath()
@@ -843,17 +849,20 @@ def azaleaVillage():
 # Location Six (Second Choice Path)
 # ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 def theSnowyMountains():
+    global characterHealth
+    global characterName
     print()
     print("You have arrived at: The Snowy Mountains")
     time.sleep(1)
     print("""
     LOCATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     As %s travereses up the snowy mountain side, their vision weakens as the snow becomes thicker.
     With the Old Boot lodged in their bag and the weather worsening, they pick up pace to find shelter.
-    An old, rotten, dripping cave is dug out in the side of the cliff as they approache.""" % (characterName))
-    print()
+    An old, rotten, dripping cave is dug out in the side of the cliff as they approache.
+▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+    """ % (characterName))
     time.sleep(1)
     if bootObtained == True and phraseObtained == True:
         print("Do you enter the cave?")
@@ -862,15 +871,14 @@ def theSnowyMountains():
             time.sleep(1)
             print("""
     SCENARIO:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     As you enter the cave, you find many markings lining the walls, large footprints engraved into the
     ground beneath you. Against the back wall of the cave as you approach appears to be a large rotting
     tooth, bigger than any normal mans. However, beneath this tooth appears to be a form of parchment.
-
+▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
     Do you read the note?
             """)
-            print()
             time.sleep(1)
             read = input("- ")
             if read in yResponses:
@@ -881,11 +889,11 @@ def theSnowyMountains():
                 print()
                 print("""
     SCENARIO:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     Reading the note you realise something is wrong and that whatever lived within this abandoned cave
     must have made its way towards Haling Cove!
-
+▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
     Do you go towards Haling Cove?
                 """)
                 goHaling = input("- ")
@@ -897,7 +905,7 @@ def theSnowyMountains():
                     print()
                     print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     With all the markings you find, you decide it is better if you no longer continue with the quest
     and decide best to stay away from anyone you interacted with, you settle down in the cave and
@@ -907,23 +915,31 @@ def theSnowyMountains():
             elif enter.lower() in nResponses:
                 print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     The weather worsens rapidly and the cave spooks %s way too much.
         """ % (characterName))
-                print("Your health is now at: %s" % (characterHealth))
+                print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
                 characterHealth = characterHealth - characterHealth
                 time.sleep(1)
                 print("You slowly freeze to death due to your decisions")
                 time.sleep(1)
-                print("Your health is now at: %s" % (characterHealth))
+                print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
                 print("%s has died." % (characterName))
             elif read in nResponses:
                 time.sleep(1)
                 print()
                 print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     With all the markings you find, you decide it is better if you no longer continue with the quest
     and decide best to stay away from anyone you interacted with, you settle down in the cave and
@@ -933,30 +949,46 @@ def theSnowyMountains():
         elif enter.lower() in nResponses:
             print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     The weather worsens rapidly and the cave spooks %s way too much.
         """ % (characterName))
-            print("Your health is now at: %s" % (characterHealth))
+            print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
             characterHealth = characterHealth - characterHealth
             time.sleep(1)
             print("You slowly freeze to death due to your decisions")
             time.sleep(1)
-            print("Your health is now at: %s" % (characterHealth))
+            print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
             print("%s has died." % (characterName))
     else:
         print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     The weather worsens rapidly and the cave spooks %s way too much.
         """ % (characterName))
-        print("Your health is now at: %s" % (characterHealth))
+        print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
         characterHealth = characterHealth - characterHealth
         time.sleep(1)
         print("You slowly freeze to death due to your decisions")
         time.sleep(1)
-        print("Your health is now at: %s" % (characterHealth))
+        print("""
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃Your health is currently at: %s┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        """ % (characterHealth))
         print("%s has died." % (characterName))
         time.sleep(5)
 
@@ -975,13 +1007,14 @@ def halingCove():
     time.sleep(1)
     print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     As %s approaches the Cove, fire can be seen billowing from the rooftops as well as the screams and
     cries of children running away, being abandoned by their parents as everyone scatters to escape
     from something.
-    
-    Do you help Haling Cove?""" % (characterName))
+▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+    Do you help Haling Cove?
+    """ % (characterName))
     time.sleep(1)#Set to 15 seconds once done
     helpCove = input("- ")
     if helpCove in yResponses:
@@ -989,10 +1022,11 @@ def halingCove():
         time.sleep(1)
         print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     %s charges into the Cove with residents passing by running away, fearing their life. Fury in your 
     eyes and determination to finish the quest and come to a conclusion.
+▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
         """ % (characterName))
         time.sleep(1)
         print("*you throw a punch at the beast*")
@@ -1001,7 +1035,8 @@ def halingCove():
         frostGiantHealth = frostGiantHealth - characterDamage
         time.sleep(1)
         print("The Beast has %s Health Remaining" % (frostGiantHealth)) #Monster has 13 HP remaining
-        time.sleep(1)
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
+        input()
         print()
         print("*the beast slashes your back*")
         time.sleep(1)
@@ -1009,7 +1044,8 @@ def halingCove():
         characterHealth = characterHealth - frostGiantDamage
         time.sleep(1)
         print("%s has %s Health Remaining" % (characterName, characterHealth)) #Character has 7 HP remaining
-        time.sleep(1)
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
+        input()
         print()
         print("*a local rushes in and shoots the beast with an arrow*")
         time.sleep(1)
@@ -1017,7 +1053,8 @@ def halingCove():
         frostGiantHealth = frostGiantHealth - arrowDamage
         time.sleep(1)
         print("The Beast has %s Health Remaining" % (frostGiantHealth)) #Monster has 3 HP remaining
-        time.sleep(1)
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
+        input()
         print()
         print("*you scratch the monster with a nearby piece of wood*")
         time.sleep(1)
@@ -1025,20 +1062,23 @@ def halingCove():
         frostGiantHealth = frostGiantHealth - characterDamage
         time.sleep(1)
         print("The Beast has %s Health Remaining" % (frostGiantHealth)) #Monster has 1 HP
-        time.sleep(1)
+        print("▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁")
+        input()
         print()
         print("Do you finish the Beast off?")
+        print()
         decisionKill = input("- ")
         if decisionKill in yResponses:
             print()
             time.sleep(1)
             print("""
     FINISHER:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     A villager charges full sprint at you screaming your name, with a full leaded silver lined axe held
     tightly in his hand. As he quickly approaches he launches the axe towards you as you grasp it within
     your hands.
+▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
             """)
             time.sleep(1)
             print("*you swing the axe at the monsters head decapitating it*")
@@ -1047,11 +1087,14 @@ def halingCove():
             frostGiantHealth = frostGiantHealth - axeDamage
             time.sleep(1)
             print("The Beast has been slain, dropping its head")
+            input()
             global beastHeadObtained
             beastHeadObtained = True
-            print()
             time.sleep(1)
-            print("The Beasts Head has been obtained!")
+            print("""
+
+        ◈ The Beasts Head has been obtained!◈
+        """)
             time.sleep(1)
             headObtained()
         elif decisionKill in nResponses:
@@ -1059,10 +1102,11 @@ def halingCove():
             time.sleep(1)
             print("""
     DEATH:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     As you stare down the Beast and look into its eyes, you realise this wasn't his choice and he has 
     done this against his will. You lower your axe hoping the Beast will change and stop everything.
+▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
             """)
             time.sleep(1)
             print("*the Beast claws you face ripping your eyes out*")
@@ -1074,7 +1118,7 @@ def halingCove():
             time.sleep(1)
             print("""
     ENDING:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     The Traveller has heard of the fatal news and has come to see you off into the Afterlife. As he
     stares at your coffin with a tear filling his eye, noticing how close you were, yet one decision
@@ -1086,7 +1130,7 @@ def halingCove():
         time.sleep(1)
         print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     %s starts to run away from the Cove, not to abandon them, but to go and get more help as they can
     see this is too much for them to handle on their own! All of a sudden a whoosh can be heard passing
@@ -1099,7 +1143,7 @@ def halingCove():
         time.sleep(1)
         print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     %s begins to collapse to the floor, knees buckle beneath you and you take your final breath, the
     arrow unable to be taken out without ripping your heart out along with it.
@@ -1114,7 +1158,7 @@ def halingCove():
         time.sleep(1)
         print("""
     SITUATION:
-    ▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+    ▔▔▔▔▔▔▔▔▔
 
     %s begins to run away from Haling Cove without any other thoughts or doubt on the entirity of the
     situation. Looking back at the chaos you do not regret your choice and continue to run. However,
