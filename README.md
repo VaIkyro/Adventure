@@ -27,3 +27,6 @@ If the character chooses to attack the monster, an attack sequence will occur.
 Then giving the character the option to finish the beast off.
 To complete the game, choose to finish the beast and return the Head to The Traveller.
 Otherwise leave the head at the village.
+
+Victory Path:
+Visit The Traveller - > Give name -> Accept quest -> Oar's Rest -> "Yes" to Old Man -> First choice -> Return to Traveller -> Continue locations -> Lockwood Village -> "Yes" to Young Girl -> First choice -> Return to Traveller -> Continue locations -> Daekrahm Village -> "Yes" to approach -> Third Choice -> "Yes" to enter Cave -> "Yes" to Read note -> "Yes" to Haling Cove -> "Yes" to help Haling cove -> "Yes" to Finish the Beast -> First choice -> Return to Traveller -> Third choice -> End of Game
